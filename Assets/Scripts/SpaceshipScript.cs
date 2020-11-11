@@ -14,11 +14,6 @@ public class SpaceshipScript : MonoBehaviour
     [Header("Particle Systems")]
     public ParticleSystem jetEngine;
     public ParticleSystem boostJetEngine;
-    public ParticleSystem laserOuterRight;
-    public ParticleSystem laserOuterLeft;
-    public ParticleSystem laserInnerRight;
-    public ParticleSystem laserInnerLeft;
-
 
     [Header("Flight Settings")]
     public float currentSpeed;
@@ -51,8 +46,6 @@ public class SpaceshipScript : MonoBehaviour
 
     private void Update()
     {
-        ShootLaser();
-
         BoostJetEngine();
     }
 
@@ -154,22 +147,4 @@ public class SpaceshipScript : MonoBehaviour
         }
     }
 
-    void ShootLaser()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            laserOuterRight.Play();
-            laserOuterLeft.Play();
-            laserInnerRight.Play();
-            laserInnerLeft.Play(); 
-        }
-    
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-            laserOuterRight.Stop();
-            laserOuterLeft.Stop();
-            laserInnerRight.Stop();
-            laserInnerLeft.Stop();
-        }
-    }
 }
