@@ -47,6 +47,11 @@ public class SpaceshipScript : MonoBehaviour
     private void Update()
     {
         BoostJetEngine();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            regularSpeed = 20;
+        }
     }
 
     // Fixed update since the flight controls are physics based
@@ -56,7 +61,7 @@ public class SpaceshipScript : MonoBehaviour
         // Once space is let go off, the ship slows down back to the regular speed
         if (Input.GetKey(KeyCode.Space))
         {
-            currentSpeed = Mathf.Lerp(currentSpeed, boostSpeed, Time.deltaTime * 3);            
+            currentSpeed = Mathf.Lerp(currentSpeed, boostSpeed, Time.deltaTime * 2);            
         }
         else
         {

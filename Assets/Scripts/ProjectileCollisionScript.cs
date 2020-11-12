@@ -17,6 +17,7 @@ public class ProjectileCollisionScript : MonoBehaviour
     {
         Physics.IgnoreCollision(GetComponent<Collider>(), GameObject.Find("SpaceshipPivot").GetComponentInChildren<Collider>());
     }
+
     private void FixedUpdate()
     {
         if (!wasDestroyed)
@@ -46,6 +47,7 @@ public class ProjectileCollisionScript : MonoBehaviour
                 Destroy(impact, 2);
             }
 
+           
             Destroy(projectile);
 
             if (trail)
@@ -54,9 +56,9 @@ public class ProjectileCollisionScript : MonoBehaviour
             }
 
             Destroy(gameObject, 2);
+      
 
             wasDestroyed = true;
-
         }
     }
 
