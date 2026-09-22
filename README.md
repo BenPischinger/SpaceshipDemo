@@ -2,6 +2,8 @@
 
 A quick demo for spaceship controls including movement, shoting lasers, a laserbeam and rockets.
 
+Video Demo: https://www.youtube.com/watch?v=Lxm76op2lFw
+
 ## Movement
 
 <p align="center">
